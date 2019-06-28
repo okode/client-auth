@@ -32,7 +32,7 @@ http.createServer(app).listen(httpPort, () => {
     console.log(`Listening at http://localhost:${httpPort}/`);
 });
 
-https.createServer(app).listen(httpsPort, () => {
+https.createServer(opts, app).listen(httpsPort, () => {
     // Success callback
     console.log(`Listening at https://localhost:${httpsPort}/`);
 });
