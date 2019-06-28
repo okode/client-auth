@@ -12,4 +12,4 @@ See [backend README.md](backend/README.md)
 
 Ionic 4 PWA.
 
-See [frontend README.md](backend/README.md)
+See [frontend README.md](frontend/README.md)
