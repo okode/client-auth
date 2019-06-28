@@ -18,7 +18,7 @@ const opts = {
     cert: fs.readFileSync('server_cert.pem'),
     requestCert: true,
     rejectUnauthorized: false,
-    ca: [ fs.readFileSync('server_cert.pem') ]
+    ca: [ fs.readFileSync('ac_fnmt.cer') ]
 };
 
 // Mount the LandingController at the / route

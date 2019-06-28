@@ -7,12 +7,11 @@ router.get('/', (req, res) => {
     const tlsSocket = req.socket as TLSSocket;
     const cert = tlsSocket.getPeerCertificate();
     if (tlsSocket.authorized) {
-        res.send(`Hello ${cert.subject.CN}, your certificate was issued by ${cert.issuer.CN}!`);
+        res.send(`<html><body>Hello ${cert.subject.CN}, your certificate was issued by ${cert.issuer.CN}!</body></html>`);
     } else if (cert.subject) {
-		res.status(403).send(`Sorry ${cert.subject.CN}, certificates from ${cert.issuer.CN} are not welcome here.`);
+		  res.status(200).send(`<html><body>Welcome <strong>${cert.subject.CN}</strong>, you are using certificate issued from <strong>${cert.issuer.CN}</strong></body></html>`);
     } else {
-		res.status(401)
-		   .send(`Sorry, but you need to provide a client certificate to continue.`);
+		  res.status(401).send(`<html><body>Sorry, but you need to provide a client certificate to continue.</body></html>`);
 	}
 });
 
