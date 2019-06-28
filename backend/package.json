@@ -1,6 +1,5 @@
 {
   "name": "typescript-server",
-  "version": "1.0.0",
   "description": "Simple TypeScript Server.",
   "main": "index.js",
   "scripts": {
